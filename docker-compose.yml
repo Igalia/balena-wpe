@@ -1,0 +1,22 @@
+version: '2'
+
+volumes:
+    balena-data:
+
+services:
+  weston:
+    restart: always
+    build: ./weston
+    privileged: true
+    volumes:
+      - 'balena-data:/weston'
+
+  wpe:
+    restart: always
+    build: ./wpe
+    privileged: true
+    ports:
+      - 8080:8080
+    volumes:
+      - 'balena-data:/weston'
+

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+udevd &
+udevadm trigger
+
+mkdir -p /weston/xdg_runtime
+chmod 0700 /weston/xdg_runtime
+
+# Start browser
+cog-fdo https://wpewebkit.org
+
+# Start Tohora
+./tohora 8080 "cog-fdo"
+

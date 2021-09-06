@@ -1,0 +1,37 @@
+#!/bin/sh
+
+udevd -d
+udevadm control --reload-rules && udevadm trigger
+
+export XDG_RUNTIME_DIR=/weston/xdg_runtime
+mkdir -p /weston/xdg_runtime
+chmod 0700 /weston/xdg_runtime
+
+cat << IEOF > /weston.ini
+[core]
+require-input=false
+
+[launcher]
+
+[shell]
+background-image=/data/wallpapers/wpe/wpe.jpg
+background-color=0xffdddddd
+background-type=scale-crop
+clock-format=minutes
+panel-color=0x90000000
+panel-position=none
+locking=false
+animation=zoom
+startup-animation=fade
+
+IEOF
+
+weston --tty 2 -c /weston.ini
+
+# Set the backlight brightness of a Raspberry touchscreen
+# The environment variable RPI_BACKLIGHT can be set to a value 0-255.
+export RPI_BACKLIGHT=${RPI_BACKLIGHT:-255}
+if [ -f /sys/class/backlight/rpi_backlight/brightness ]; then
+	echo $RPI_BACKLIGHT > /sys/class/backlight/rpi_backlight/brightness
+fi
+

@@ -1,0 +1,14 @@
+#! /bin/bash
+
+export WAYLAND_DISPLAY="wayland-0"
+export XDG_RUNTIME_DIR=/weston/xdg_runtime
+
+export COG_PLATFORM_FDO_VIEW_FULLSCREEN=${COG_PLATFORM_FDO_VIEW_FULLSCREEN:-1}
+
+export COG_PLATFORM_FDO_VIEW_WIDTH=${COG_PLATFORM_FDO_VIEW_WIDTH=:-1280}
+export COG_PLATFORM_FDO_VIEW_HEIGHT=${COG_PLATFORM_FDO_VIEW_HEIGHT:-720}
+export GALLIUM_HUD=${GALLIUM_HUD:-}
+
+killall /usr/bin/cog
+( /usr/bin/cog -P fdo $@ )&
+
