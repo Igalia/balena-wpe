@@ -9,6 +9,14 @@ export COG_PLATFORM_FDO_VIEW_WIDTH=${COG_PLATFORM_FDO_VIEW_WIDTH=:-1280}
 export COG_PLATFORM_FDO_VIEW_HEIGHT=${COG_PLATFORM_FDO_VIEW_HEIGHT:-720}
 export GALLIUM_HUD=${GALLIUM_HUD:-}
 
-killall /usr/bin/cog
-( /usr/bin/cog -P fdo $@ )&
+function launch
+{
+	while true
+	do
+        killall /usr/bin/cog
+        echo "Launching Cog for $@ ..."
+        /usr/bin/cog -P fdo $@
+	done
+}
 
+( launch $@ )&
