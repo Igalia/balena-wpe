@@ -26,8 +26,6 @@ startup-animation=fade
 
 IEOF
 
-weston --tty 2 -c /weston.ini
-
 # Set the backlight brightness of a Raspberry touchscreen
 # The environment variable RPI_BACKLIGHT can be set to a value 0-255.
 export RPI_BACKLIGHT=${RPI_BACKLIGHT:-255}
@@ -35,3 +33,4 @@ if [ -f /sys/class/backlight/rpi_backlight/brightness ]; then
 	echo $RPI_BACKLIGHT > /sys/class/backlight/rpi_backlight/brightness
 fi
 
+weston --tty 2 -c /weston.ini
