@@ -6,6 +6,9 @@ RUN chmod +x /wpe-init
 COPY cog-fdo /usr/bin/
 RUN chmod +x /usr/bin/cog-fdo
 
+COPY cog-open /usr/bin/
+RUN chmod +x /usr/bin/cog-open
+
 CMD [ "/wpe-init" ]
 
 ENV TOHORA_VERSION=0.3.2
