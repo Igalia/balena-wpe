@@ -1,15 +1,22 @@
 version: '2'
 
 volumes:
-    balena-data:
+    pulse:                          # Required for PA over UNIX socket
+    weston:
 
 services:
+  audio:
+    image: balenablocks/audio
+    privileged: true
+    volumes:
+      - 'pulse:/run/pulse'
+
   weston:
     restart: always
     build: ./weston
     privileged: true
     volumes:
-      - 'balena-data:/weston'
+      - 'weston:/run/weston'
 
   wpe:
     restart: always
@@ -18,5 +25,6 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - 'balena-data:/weston'
+      - 'weston:/run/weston'
+      - 'pulse:/run/pulse'
 
