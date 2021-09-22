@@ -3,12 +3,22 @@
 udevd &
 udevadm trigger
 
-mkdir -p /weston/xdg_runtime
-chmod 0700 /weston/xdg_runtime
+# /var/tmp points to /var/volatile/tmp  what it doesn't exist
+# /var/tmp is need for gstreamer to download chunks of videos
+mkdir -p /var/volatile/tmp  || rm -rf /var/volatile/tmp/*
+
+# Create XDG runtime dir
+mkdir -p /run/weston/xdg_runtime
+chmod 0700 /run/weston/xdg_runtime
+
+# Launch a D-Bus daemon for cogctl
+mkdir -p /run/dbus/
+dbus-launch > /run/dbus/env
+export $(cat /run/dbus/env)
 
 # Start browser
 cog-fdo https://wpewebkit.org
 
 # Start Tohora
-./tohora 8080 "cog-fdo"
+./tohora 8080 "cog-open"
 
