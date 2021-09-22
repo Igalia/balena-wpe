@@ -3,9 +3,9 @@
 udevd -d
 udevadm control --reload-rules && udevadm trigger
 
-export XDG_RUNTIME_DIR=/weston/xdg_runtime
-mkdir -p /weston/xdg_runtime
-chmod 0700 /weston/xdg_runtime
+export XDG_RUNTIME_DIR=/run/weston/xdg_runtime
+mkdir -p /run/weston/xdg_runtime
+chmod 0700 /run/weston/xdg_runtime
 
 cat << IEOF > /weston.ini
 [core]
