@@ -24,7 +24,12 @@ function launch
         killall /usr/bin/cog
         echo "Launching Cog for $@ ..."
         /usr/bin/cog -P fdo $@
-        sleep 5
+        if [ "${WPE_COG_RELAUNCH}" == "1" ]
+        then
+            sleep ${WPE_COG_RELAUNCH_DELAY:-5}
+        else
+            return
+        fi
 	done
 }
 
