@@ -24,6 +24,7 @@ services:
     privileged: true
     ports:
       - 8080:8080
+      - 12321:12321
     volumes:
       - 'weston:/run/weston'
       - 'pulse:/run/pulse'

@@ -11,6 +11,11 @@ export GALLIUM_HUD=${GALLIUM_HUD:-}
 
 export PULSE_SERVER=${WPE_PULSE_SERVER:-unix:/run/pulse/pulseaudio.socket}
 
+export WPE_ENABLE_INSPECTOR_SERVER=${WPE_ENABLE_INSPECTOR_SERVER:-1}
+if [ "${WPE_ENABLE_INSPECTOR_SERVER}" == "1" ]
+then
+    export WEBKIT_INSPECTOR_SERVER="0.0.0.0:12321"
+fi
 
 function launch
 {
