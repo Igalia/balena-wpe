@@ -1,5 +1,7 @@
 #!/bin/sh
 
+URL=${WPE_URL:-https://wpewebkit.org}
+
 udevd &
 udevadm trigger
 
@@ -17,7 +19,7 @@ dbus-launch > /run/dbus/env
 export $(cat /run/dbus/env)
 
 # Start browser
-cog-fdo https://wpewebkit.org
+cog-fdo ${URL}
 
 # Start Tohora
 ./tohora 8080 "cog-open"
