@@ -24,6 +24,7 @@ function launch
         killall /usr/bin/cog
         echo "Launching Cog for $@ ..."
         /usr/bin/cog -P fdo $@
+        sleep 5
 	done
 }
 
