@@ -34,8 +34,6 @@ browser.
 - [Table of contents](#table-of-contents)
 - [Hardware requirements](#hardware-requirements)
 - [Showcases](#showcases)
-- [Getting started](#getting-started)
-  * [Test balena WPE Fleet in your Raspberry](#test-balena-wpe-fleet-in-your-raspberry)
   * [Fork the balena-wpe Project and create your own Fleet](#fork-the-balena-wpe-project-and-create-your-own-fleet)
 - [Content Load](#content-load)
   * [Changing content at runtime](#changing-content-at-runtime)
@@ -45,6 +43,7 @@ browser.
   * [Browser settings](#browser-settings)
   * [Sound settings](#sound-settings)
   * [Useful environment variables for debugging](#useful-environment-variables-for-debugging)
+- [Getting started](#getting-started)
 
 ## Hardware requirements
 
@@ -54,20 +53,6 @@ browser.
 * Keyboard, mouse or a Touchscreen
 
 ## Getting started
-
-### Test balena WPE Fleet in your Raspberry
-
-#. Visit the [balena WPE Fleet](https://hub.balena.io/balenalabs/balenawpe)
-   page
-#. Use the form on the left above to configure and download balenaOS for your
-   new device
-#. Write the OS file you downloaded to your SD card. balena recommend using
-   [Etcher](http://www.etcher.io)
-   * Direct link for [Debian/Ubuntu Etcher packages](https://github.com/balena-io/etcher#debian-and-ubuntu-based-package-repository-gnulinux-x86x64)
-   * Direct link for [RedHat/Fedora Etcher packages](https://github.com/balena-io/etcher#redhat-rhel-and-fedora-based-package-repository-gnulinux-x86x64)
-#. Insert the freshly burnt SD card into the Raspberry Pi 3/4
-#. Connect your Raspberry Pi 3/4 to the internet, then power it up
-#. Your device should appear in your application dashboard within a few minutes
 
 ### Fork the balena-wpe project and create your own fleet
 
