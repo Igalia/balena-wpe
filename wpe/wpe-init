@@ -2,6 +2,13 @@
 
 URL=${WPE_URL:-https://wpewebkit.org}
 
+CPU_SCALING_GOVERNOR=${CPU_SCALING_GOVERNOR:-ondemand}
+
+for i in $(ls /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor)
+do
+    echo "${CPU_SCALING_GOVERNOR}" > $i
+done
+
 udevd &
 udevadm trigger
 

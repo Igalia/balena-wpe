@@ -173,6 +173,10 @@ Pulser Server by setting the `PULSE_SERVER` environment variable.
 | **`MESA_DEBUG`**             | `1`            | If set to `1` Mesa error messages are printed to stderr
 | **`WAYLAND_DEBUG`**          | `1`            | Acticates the Wayland debug output
 
+| Environment variable        | Options          |  Default       | Description
+|-----------------------------|------------------|----------------|--------------
+| **`CPU_SCALING_GOVERNOR`**  | [options](https://www.kernel.org/doc/html/latest/admin-guide/pm/cpufreq.html#generic-scaling-governors) | ondemand | Scaling governors
+
 ## Showcases
 
 * CSS transformation and animations in [WebKit poster circle example](https://webkit.org/blog-files/3d-transforms/poster-circle.html)
