@@ -3,6 +3,8 @@
 udevd -d
 udevadm control --reload-rules && udevadm trigger
 
+WESTON_IDLE_TIME=${WESTON_IDLE_TIME:-0}
+
 export XDG_RUNTIME_DIR=/run/weston/xdg_runtime
 mkdir -p /run/weston/xdg_runtime
 chmod 0700 /run/weston/xdg_runtime
@@ -33,4 +35,4 @@ if [ -f /sys/class/backlight/rpi_backlight/brightness ]; then
 	echo $RPI_BACKLIGHT > /sys/class/backlight/rpi_backlight/brightness
 fi
 
-weston --tty 2 -c /weston.ini
+weston --idle-time ${WESTON_IDLE_TIME} --tty 2 -c /weston.ini
