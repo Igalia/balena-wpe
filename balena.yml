@@ -4,7 +4,7 @@ description: >-
   embedders to create simple and performant systems based on Web platform
   technologies. It is a WebKit port designed with flexibility and hardware
   acceleration in mind, leveraging common 3D graphics APIs for best performance.
-version: 1.0.0
+version: 1.0.1
 type: sw.application
 assets:
   repository:
