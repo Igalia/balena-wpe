@@ -1,11 +1,10 @@
 name: wpe
 description: >-
-  A hardware accelerated web browser based on WPE WebKit.
-  WPE WebKit allows embedders to create simple and performant systems based on
-  Web platform technologies. It is a WebKit port designed with flexibility and
-  hardware acceleration in mind, leveraging common 3D graphics APIs for best
-  performance.
-version: 0.0.0
+  A hardware accelerated web browser based on WPE WebKit. WPE WebKit allows
+  embedders to create simple and performant systems based on Web platform
+  technologies. It is a WebKit port designed with flexibility and hardware
+  acceleration in mind, leveraging common 3D graphics APIs for best performance.
+version: 1.0.0
 type: sw.application
 assets:
   repository:
