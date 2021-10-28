@@ -33,7 +33,7 @@ browser.
 
 - [Table of contents](#table-of-contents)
 - [Hardware requirements](#hardware-requirements)
-- [Showcases](#showcases)
+- [Getting started](#getting-started)
   * [Fork the balena-wpe Project and create your own Fleet](#fork-the-balena-wpe-project-and-create-your-own-fleet)
 - [Content Load](#content-load)
   * [Changing content at runtime](#changing-content-at-runtime)
@@ -43,7 +43,9 @@ browser.
   * [Browser settings](#browser-settings)
   * [Sound settings](#sound-settings)
   * [Useful environment variables for debugging](#useful-environment-variables-for-debugging)
-- [Getting started](#getting-started)
+- [Showcases](#showcases)
+- [Development](#development)
+  * [Semantic commits](#semantic-commits)
 
 ## Hardware requirements
 
@@ -188,4 +190,37 @@ Pulser Server by setting the `PULSE_SERVER` environment variable.
 * Rendering WebGL [Aquarium](https://webglsamples.org/aquarium/aquarium.html) and [Abstract shapes](https://mrdoob.neocities.org/023/)
     * <img src="https://s9.gifyu.com/images/webgl_aquarium.gif" />
 	* <img src="https://s9.gifyu.com/images/webgl_asbtractshapes.gif" />
+
+
+## Development
+
+## Semantic commits
+
+* Install:
+
+  ``` sh
+  sudo apt install npm
+  sudo -E npm install -g versionist
+  sudo -E npm install -g balena-versionist
+  ```
+
+* Add commits with semantic format:
+
+  ```
+  Semantic description of the change
+
+  ...Details ...
+
+  Change-Type: <type>  # major, minor or patch
+  ```
+
+* Update the changelog:
+
+  ```
+  balena-versionist
+  ```
+
+* Commit the changes in `balena.yml`, `VERSION` and `CHANGELOG.md` to
+  generate a release using the `vX.X.X` format in the commit message.
+
 
