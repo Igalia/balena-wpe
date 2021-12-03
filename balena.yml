@@ -16,7 +16,7 @@ assets:
     data:
       url: 'https://raw.githubusercontent.com/igalia/balena-wpe/main/logo.png'
 data:
-  defaultDeviceType: raspberrypi3
+  defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
     - raspberrypi4-64
     - raspberrypi3

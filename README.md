@@ -2,8 +2,8 @@
 
 This project uses 3 different balena blocks:
 
-* [balena WPE](https://github.com/Igalia/docker-balena-wpe):
-* [balena Weston](https://github.com/Igalia/docker-balena-weston):
+* [balena WPE](https://github.com/Igalia/balena-browser-wpe):
+* [balena Weston](https://github.com/Igalia/balena-weston):
 * [balena Audio](https://github.com/balenablocks/audio):
 
 ![balena WPE design](https://github.com/igalia/balena-wpe/blob/master/static/resources/design.svg?raw=true)
@@ -78,7 +78,7 @@ environment variable. The default value is [wpewebkit.org](http://www.webkit.org
 
 ### Changing content at runtime
 
-balena-wpe ships with [tohora](https://github.com/mozz100/tohora/) so which
+balena-browser-wpe ships with [tohora](https://github.com/mozz100/tohora/) so which
 provides a web interface for changing target URLs at runtime on port 8080.
 
 ### Offline content
@@ -152,7 +152,7 @@ Opening URL: inspector://192.168.1.170:12321
 
 ### Sound settings
 
-balena-wpe relies on balena-audio for the audio processing. Check the specific
+balena-browser-wpe relies on balena-audio for the audio processing. Check the specific
 [settings](https://github.com/balenablocks/audio#sendreceive-audio) of this
 block for audio settings.
 
