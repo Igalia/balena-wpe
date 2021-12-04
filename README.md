@@ -2,9 +2,9 @@
 
 This project uses 3 different balena blocks:
 
-* [balena WPE](https://github.com/Igalia/balena-browser-wpe):
-* [balena Weston](https://github.com/Igalia/balena-weston):
-* [balena Audio](https://github.com/balenablocks/audio):
+* [balena WPE](https://github.com/Igalia/balena-browser-wpe)
+* [balena Weston](https://github.com/Igalia/balena-weston)
+* [balena Audio](https://github.com/balenablocks/audio)
 
 ![balena WPE design](https://github.com/igalia/balena-wpe/blob/master/static/resources/design.svg?raw=true)
 
