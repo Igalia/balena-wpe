@@ -182,14 +182,14 @@ Pulser Server by setting the `PULSE_SERVER` environment variable.
 ## Showcases
 
 * CSS transformation and animations in [WebKit poster circle example](https://webkit.org/blog-files/3d-transforms/poster-circle.html)
-    * <img src="https://s9.gifyu.com/images/postercircle.gif" />
+    * <img src="https://github.com/igalia/balena-wpe/blob/master/static/resources/postercircle.gif?raw=true" />
 * Playing an embedded [Youtube](https://wpewebkit.org) video
-    * <img src="https://s9.gifyu.com/images/wpewebkitorg.gif" />
+    * <img src="https://github.com/igalia/balena-wpe/blob/master/static/resources/wpewebkitorg.gif?raw=true" />
 * Playing [Bouncyballs](https://bouncyballs.org/)
-    * <img src="https://s9.gifyu.com/images/bouncyballs.gif" />
+    * <img src="https://github.com/igalia/balena-wpe/blob/master/static/resources/bouncyballs.gif?raw=true" />
 * Rendering WebGL [Aquarium](https://webglsamples.org/aquarium/aquarium.html) and [Abstract shapes](https://mrdoob.neocities.org/023/)
-    * <img src="https://s9.gifyu.com/images/webgl_aquarium.gif" />
-	* <img src="https://s9.gifyu.com/images/webgl_asbtractshapes.gif" />
+    * <img src="https://github.com/igalia/balena-wpe/blob/master/static/resources/webgl_aquarium.gif?raw=true" />
+	* <img src="https://github.com/igalia/balena-wpe/blob/master/static/resources/webgl_asbtractshapes.gif?raw=true" />
 
 
 ## Development
