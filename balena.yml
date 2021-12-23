@@ -16,6 +16,11 @@ assets:
     data:
       url: 'https://raw.githubusercontent.com/igalia/balena-wpe/main/logo.png'
 data:
+  applicationConfigVariables:
+    - BALENA_HOST_CONFIG_gpu_mem: 396
+    - BALENA_HOST_CONFIG_gpu_mem_256: 128
+    - BALENA_HOST_CONFIG_gpu_mem_512: 196
+    - BALENA_HOST_CONFIG_dtoverlay: "vc4-kms-v3d"
   defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
     - raspberrypi4-64
