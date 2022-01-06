@@ -1,8 +1,12 @@
 #!/bin/sh
 
-URL=${WPE_URL:-https://wpewebkit.org}
+export WAYLAND_DISPLAY="wayland-0"
+export XDG_RUNTIME_DIR=/run/weston/xdg_runtime
 
+URL=${WPE_URL:-https://wpewebkit.org}
 CPU_SCALING_GOVERNOR=${CPU_SCALING_GOVERNOR:-performance}
+
+WAYLAND_INFO="/usr/bin/waylandeglinfo"
 
 for i in $(ls /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor)
 do
@@ -16,9 +20,23 @@ udevadm trigger
 # /var/tmp is need for gstreamer to download chunks of videos
 mkdir -p /var/volatile/tmp  || rm -rf /var/volatile/tmp/*
 
-# Create XDG runtime dir
-mkdir -p /run/weston/xdg_runtime
-chmod 0700 /run/weston/xdg_runtime
+# Wait for the Wayland compositor is available
+if test -f "${WAYLAND_INFO}"
+then
+    while ! ${WAYLAND_INFO}
+    do
+        echo "Waiting for the Wayland compositor is ready ..."
+        sleep 0.5
+    done
+else
+    # If waylandeglinfo is not available in the image let's rely in the
+    # creation of the wayland socket in the XDG runtime directory.
+    while ! test -S ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}
+    do
+        echo "Waiting for the ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY} socket ..."
+        sleep 0.5
+    done
+fi
 
 # Launch a D-Bus daemon for cogctl
 mkdir -p /run/dbus/
