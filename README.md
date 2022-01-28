@@ -132,7 +132,7 @@ in an Epiphany Browser.
 
 | Environment variable              | Options          |  Default       | Description
 |-----------------------------------|------------------|----------------|---------------------------
-| **`WPE_ENABLE_INSPECTOR_SERVER`**	| `0`,`1`, `unset` | `unset`        | Enables the Web Inspector
+| **`WPE_ENABLE_INSPECTOR_SERVER`**	| `0`,`1`          | `0`            | Enables the Web Inspector
 
 Alternatively you can use
 [docker-libwebkit2gtk](https://gitlab.com/saavedra.pablo/docker-libwebkit2gtk)
@@ -177,7 +177,7 @@ Pulser Server by setting the `PULSE_SERVER` environment variable.
 
 | Environment variable        | Options          |  Default       | Description
 |-----------------------------|------------------|----------------|--------------
-| **`CPU_SCALING_GOVERNOR`**  | [options](https://www.kernel.org/doc/html/latest/admin-guide/pm/cpufreq.html#generic-scaling-governors) | ondemand | Scaling governors
+| **`CPU_SCALING_GOVERNOR`**  | [options](https://www.kernel.org/doc/html/latest/admin-guide/pm/cpufreq.html#generic-scaling-governors) | performance | Scaling governors
 
 ## Showcases
 
