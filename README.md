@@ -13,7 +13,7 @@ WebKit](https://www.igalia.com/wpe/). Contrary to other solutions, this
 project runs the browser on the top of a
 [Wayland compositor](https://wayland.freedesktop.org/) (Weston).
 
-Weston aims to be lean and fast and predictable Wayland compositor. It
+Weston aims to be a lean, fast and predictable Wayland compositor. It
 provides a full-featured environment for non-desktop applications what
 eventually can run a Web browser such as automotive, embedded, in-flight,
 industrial, kiosks, set-top boxes and TVs.
@@ -78,7 +78,7 @@ environment variable. The default value is [wpewebkit.org](http://www.webkit.org
 
 ### Changing content at runtime
 
-balena-browser-wpe ships with [tohora](https://github.com/mozz100/tohora/) so which
+balena-browser-wpe ships with [tohora](https://github.com/mozz100/tohora/), which
 provides a web interface for changing target URLs at runtime on port 8080.
 
 ### Offline content
@@ -104,10 +104,10 @@ variables.
 How to set the `config.txt` is pretty well documented in the RaspberryPi
 official [documentation](https://www.raspberrypi.org/documentation/computers/config_txt.html).
 You can overwrite these settings in the balena dashboard setting
-variables in your environment using this prefix `RESIN_HOST_CONFIG_`.
+variables in your environment using the prefix `RESIN_HOST_CONFIG_`.
 [Read more](https://balena.io/docs/configuration/advanced/#modifying-config-txt-remotely).
 
-Probably you will be interested in to set the GPU memory to a more suitable
+Probably you will be interested in setting the GPU memory to a more suitable
 value for hardware accelerated graphics.
 
 | Key                                 | Value
@@ -126,8 +126,8 @@ value for hardware accelerated graphics.
 | **`WPE_COG_RELAUNCH`**                     | `0`, `1`  | `unset` | Enables forcing relaunch of the browser
 | **`WPE_COG_RELAUNCH_DELAY`**               | `integer` | `5`     | Add delay during forced relaunch
 
-By setting `WPE_ENABLE_INSPECTOR_SERVER` to on you can connect to the
-Web browser inspector server in remote loading the following URL `inspector://<raspberrypi IP>:12321`
+By setting `WPE_ENABLE_INSPECTOR_SERVER` to `on` you can connect to the
+Web browser inspector server in the board by loading the following URL `inspector://<raspberrypi IP>:12321`
 in an Epiphany Browser.
 
 | Environment variable              | Options          |  Default       | Description
@@ -156,7 +156,7 @@ balena-browser-wpe relies on balena-audio for the audio processing. Check the sp
 [settings](https://github.com/balenablocks/audio#sendreceive-audio) of this
 block for audio settings.
 
-Alternatively the block can be also configured to route the audio through other
+Alternatively the block can be also configured to route the audio through another
 Pulser Server by setting the `PULSE_SERVER` environment variable.
 
 | Environment variable       | Options                                               |  Default
@@ -167,13 +167,13 @@ Pulser Server by setting the `PULSE_SERVER` environment variable.
 
 | Environment variable         | Example        | Description
 |------------------------------|----------------|----------------
-| **`EGL_LOG_LEVEL`**          | `debug`        | This changes the log level of the main library and the drivers in Mesa
-| **`GALLIUM_HUD`**            | `load+cpu+fps` | Activates and set the Gallium3D Heads-Up Display
+| **`EGL_LOG_LEVEL`**          | `debug`        | Change the log level of the main library and the drivers in Mesa
+| **`GALLIUM_HUD`**            | `load+cpu+fps` | Activate and set the Gallium3D Heads-Up Display
 | **`GST_DEBUG`**              | `*:DEBUG`      | Set the log level output in GStreamer
 | **`G_MESSAGES_DEBUG`**       | `all`          | Set the log level output in GLib
-| **`LIBGL_DEBUG`**            | `verbose`      | If defined Mesa LibGL debug information will be printed to stderr. If set to verbose additional information will be printed
+| **`LIBGL_DEBUG`**            | `verbose`      | If defined Mesa LibGL debug information will be printed to stderr. If set to `verbose` additional information will be printed
 | **`MESA_DEBUG`**             | `1`            | If set to `1` Mesa error messages are printed to stderr
-| **`WAYLAND_DEBUG`**          | `1`            | Acticates the Wayland debug output
+| **`WAYLAND_DEBUG`**          | `1`            | If set to `1` the Wayland debug output is printed to stderr
 
 | Environment variable        | Options          |  Default       | Description
 |-----------------------------|------------------|----------------|--------------
