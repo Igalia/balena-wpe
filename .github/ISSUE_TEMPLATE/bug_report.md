@@ -22,6 +22,7 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Device (please complete the following information):**
+ - Hardware: Raspberry Pi 4
  - Balena OS type: [e.g. balenaOS]
  - Balena OS version: [e.g. 2.83.21+rev1]
  - Device type: [e.g: Raspberry Pi 4 (using 64bit OS)]
