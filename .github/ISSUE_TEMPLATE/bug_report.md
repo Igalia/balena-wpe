@@ -21,11 +21,15 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Device (please complete the following information):**
- - Hardware: Raspberry Pi 4
+**Balena Fleet (please complete the following information):**
+ - Balena Device type: [e.g. Raspberry Pi 3, Raspberry Pi 4 (using 64bit OS)]
+ - Balena Device architecture : [e.g. aarch64, armv7hf]
+
+**Balena Device (please complete the following information):**
+ - Hardware: [e.g. Raspberry Pi 4]
  - Balena OS type: [e.g. balenaOS]
  - Balena OS version: [e.g. 2.83.21+rev1]
- - Device type: [e.g: Raspberry Pi 4 (using 64bit OS)]
+ - Device type: [e.g. Raspberry Pi 4 (using 64bit OS)]
 
 **Balena (please complete the following information):**
  - Balena WPE Fleet version: [e.g.  2.1.0 or 8d7047d65500b3487eef2945d24a5f8219bd07be ]
