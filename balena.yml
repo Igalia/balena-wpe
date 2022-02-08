@@ -6,12 +6,17 @@ description: >-
   acceleration in mind, leveraging common 3D graphics APIs for best performance.
 post-provisioning: >-
   ## Usage instructions
+
   **Application download**
+
   Once you power up your device you'll need to allow some time for it to
   download the application, this typically takes less than one minute but it can take
   more depending on your internet connection.
+
   __Note: The device will reboot to apply some device configurations.__
+
   **Usage**
+
   When the download is complete a browser will start in the screen. You should see
   the WPE WebKit homesite. You can also access http://balena:8080 or http://balena.local:8080
   to modify the webpage being loaded.
