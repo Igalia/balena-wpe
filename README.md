@@ -189,7 +189,7 @@ Pulser Server by setting the `PULSE_SERVER` environment variable.
     * <img src="https://github.com/igalia/balena-wpe/blob/master/static/resources/bouncyballs.gif?raw=true" />
 * Rendering WebGL [Aquarium](https://webglsamples.org/aquarium/aquarium.html) and [Abstract shapes](https://mrdoob.neocities.org/023/)
     * <img src="https://github.com/igalia/balena-wpe/blob/master/static/resources/webgl_aquarium.gif?raw=true" />
-	* <img src="https://github.com/igalia/balena-wpe/blob/master/static/resources/webgl_asbtractshapes.gif?raw=true" />
+	* <img src="https://github.com/igalia/balena-wpe/blob/master/static/resources/webgl_abstractshapes.gif?raw=true" />
 
 
 ## Development
