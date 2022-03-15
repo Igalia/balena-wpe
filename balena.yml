@@ -10,17 +10,17 @@ post-provisioning: >-
   **Application download**
 
   Once you power up your device you'll need to allow some time for it to
-  download the application, this typically takes less than one minute but it can take
-  more depending on your internet connection.
+  download the application, this typically takes less than one minute but it can
+  take more depending on your internet connection.
 
   __Note: The device will reboot to apply some device configurations.__
 
   **Usage**
 
-  When the download is complete a browser will start in the screen. You should see
-  the WPE WebKit homesite. You can also access http://balena:8080 or http://balena.local:8080
-  to modify the webpage being loaded.
-version: 2.1.0
+  When the download is complete a browser will start in the screen. You should
+  see the WPE WebKit homesite. You can also access http://balena:8080 or
+  http://balena.local:8080 to modify the webpage being loaded.
+version: 2.2.0
 type: sw.application
 assets:
   repository:
@@ -36,14 +36,14 @@ data:
     - WPE_COG_PLATFORM_FDO_VIEW_FULLSCREEN: 1
     - WPE_COG_PLATFORM_FDO_VIEW_HEIGHT: 720
     - WPE_COG_PLATFORM_FDO_VIEW_WIDTH: 1280
-    - WPE_COG_RELAUNCH: ""
+    - WPE_COG_RELAUNCH: ''
     - WPE_COG_RELAUNCH_DELAY: 5
-    - WPE_PULSE_SERVER: "unix:/run/pulse/pulseaudio.socket"
+    - WPE_PULSE_SERVER: 'unix:/run/pulse/pulseaudio.socket'
   applicationConfigVariables:
     - BALENA_HOST_CONFIG_gpu_mem: 396
     - BALENA_HOST_CONFIG_gpu_mem_256: 128
     - BALENA_HOST_CONFIG_gpu_mem_512: 196
-    - BALENA_HOST_CONFIG_dtoverlay: "vc4-kms-v3d"
+    - BALENA_HOST_CONFIG_dtoverlay: vc4-kms-v3d
   defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
     - raspberrypi4-64
