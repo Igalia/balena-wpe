@@ -1,4 +1,4 @@
-FROM igalia/balena-weston:%%BALENA_MACHINE_NAME%%-c1becf9
+FROM igalia/balena-weston:%%BALENA_MACHINE_NAME%%-252a2a2
 
 COPY data/	 /data/
 
