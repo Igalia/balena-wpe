@@ -20,7 +20,7 @@ post-provisioning: >-
   When the download is complete a browser will start in the screen. You should
   see the WPE WebKit homesite. You can also access http://balena:8080 or
   http://balena.local:8080 to modify the webpage being loaded.
-version: 3.0.0
+version: 4.0.0
 type: sw.application
 assets:
   repository:
