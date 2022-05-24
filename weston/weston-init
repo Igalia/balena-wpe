@@ -35,4 +35,13 @@ if [ -f /sys/class/backlight/rpi_backlight/brightness ]; then
 	echo $RPI_BACKLIGHT > /sys/class/backlight/rpi_backlight/brightness
 fi
 
-weston --idle-time ${WESTON_IDLE_TIME} --tty 2 -c /weston.ini
+WPE_WESTON_OUTPUT_USE_CURRENT_MODE=${WPE_WESTON_OUTPUT_USE_CURRENT_MODE:-0}
+
+# Allow usage of --current-mode, to let the host system decide the resolution
+if [ "$WPE_WESTON_OUTPUT_USE_CURRENT_MODE" -eq 1 ]; then
+	WESTON_CURRENT_MODE="--current-mode"
+else
+	WESTON_CURRENT_MODE=""
+fi
+
+weston ${WESTON_CURRENT_MODE} --idle-time ${WESTON_IDLE_TIME} --tty 2 -c /weston.ini
