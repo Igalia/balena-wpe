@@ -150,6 +150,22 @@ Sending build context to Docker daemon  81.92kB
 Opening URL: inspector://192.168.1.170:12321
 ```
 
+### Compositor settings
+
+The browser relies on the Weston compositor to work. While the defaults are
+fine for most uses, some tweaks are allowed regarding the output resolution.
+
+| Environment variable                       | Options   | Default | Description
+|--------------------------------------------|-----------|---------|---------------------------------------------------
+| **`WPE_WESTON_OUTPUT_USE_CURRENT_MODE`**   | `0`, `1`  | `0`     | Inherit the display mode from KMS console
+| **`WPE_WESTON_OUTPUT_MAX_WIDTH`**          | `integer` | `0`     | Maximum horizontal resolution the compositor may set
+| **`WPE_WESTON_OUTPUT_MAX_HEIGHT`**         | `integer` | `0`     | Maximum vertical resolution the compositor may set
+
+The maximum-resolution environment variables rely on the list of modes
+advertised by the DRM subsystem. That means if you set for example the
+maximum horizontal resolution to `1920` and the list contains `3840x2160`,
+`2560x1440`, `1920x1080` and `1280x800`, `1920x1080` will be picked.
+
 ### Sound settings
 
 balena-browser-wpe relies on balena-audio for the audio processing. Check the specific
