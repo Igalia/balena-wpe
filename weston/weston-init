@@ -28,6 +28,60 @@ startup-animation=fade
 
 IEOF
 
+WPE_WESTON_OUTPUT_MAX_WIDTH=${WPE_WESTON_OUTPUT_MAX_WIDTH:-0}
+WPE_WESTON_OUTPUT_MAX_HEIGHT=${WPE_WESTON_OUTPUT_MAX_HEIGHT:-0}
+
+is_in_range() {
+    test "$2" -eq 0 -o "$1" -le "$2"
+}
+
+# Limit resolution if necessary
+if [ "$WPE_WESTON_OUTPUT_MAX_WIDTH" -gt 0 -o "$WPE_WESTON_OUTPUT_MAX_HEIGHT" -gt 0 ]; then
+    for outp in /sys/class/drm/card*-*; do
+        # no outputs
+        if [ ! -d "$outp" ]; then
+            break
+        fi
+        # skip if not enabled
+        if [ "$(cat ${outp}/enabled)" = "disabled" ]; then
+            continue
+        fi
+        # get the output name
+        outn=${outp#*-}
+        # check the modes
+        moden=0
+        foundres=
+        for mode in $(cat "${outp}/modes"); do
+            wres=${mode%x*}
+            hres=${mode#*x}
+            moden=$(($moden + 1))
+            # skip interlaced modes and other junk
+            if ! [ "$wres" -eq "$wres" -a "$hres" -eq "$hres" ] 2> /dev/null; then
+                continue
+            fi
+            # check resolution constraints
+            if ! is_in_range "$wres" "$WPE_WESTON_OUTPUT_MAX_WIDTH"; then
+                continue
+            fi
+            if ! is_in_range "$hres" "$WPE_WESTON_OUTPUT_MAX_HEIGHT"; then
+                continue
+            fi
+            # found an acceptable res
+            foundres="$mode"
+            break
+        done
+        # found a res to use and it's non-preferred, override in weston
+        if [ -n "$foundres" -a "$moden" -gt 1 ]; then
+            cat << IEOF >> /weston.ini
+
+[output]
+name=${outn}
+mode=${foundres}
+IEOF
+        fi
+    done
+fi
+
 # Set the backlight brightness of a Raspberry touchscreen
 # The environment variable RPI_BACKLIGHT can be set to a value 0-255.
 export RPI_BACKLIGHT=${RPI_BACKLIGHT:-255}

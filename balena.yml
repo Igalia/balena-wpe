@@ -40,6 +40,8 @@ data:
     - WPE_COG_RELAUNCH_DELAY: 5
     - WPE_PULSE_SERVER: 'unix:/run/pulse/pulseaudio.socket'
     - WPE_WESTON_OUTPUT_USE_CURRENT_MODE: 0
+    - WPE_WESTON_OUTPUT_MAX_WIDTH: 0
+    - WPE_WESTON_OUTPUT_MAX_HEIGHT: 0
   applicationConfigVariables:
     - BALENA_HOST_CONFIG_gpu_mem: 396
     - BALENA_HOST_CONFIG_gpu_mem_256: 128
