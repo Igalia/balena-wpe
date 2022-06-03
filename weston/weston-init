@@ -98,4 +98,6 @@ else
 	WESTON_CURRENT_MODE=""
 fi
 
-weston ${WESTON_CURRENT_MODE} --idle-time ${WESTON_IDLE_TIME} --tty 2 -c /weston.ini
+WPE_WESTON_SHELL=${WPE_WESTON_SHELL:-desktop}
+
+weston ${WESTON_CURRENT_MODE} --shell ${WPE_WESTON_SHELL}-shell.so --idle-time ${WESTON_IDLE_TIME} --tty 2 -c /weston.ini

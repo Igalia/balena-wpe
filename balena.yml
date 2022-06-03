@@ -39,6 +39,7 @@ data:
     - WPE_COG_RELAUNCH: ''
     - WPE_COG_RELAUNCH_DELAY: 5
     - WPE_PULSE_SERVER: 'unix:/run/pulse/pulseaudio.socket'
+    - WPE_WESTON_SHELL: desktop
     - WPE_WESTON_OUTPUT_USE_CURRENT_MODE: 0
     - WPE_WESTON_OUTPUT_MAX_WIDTH: 0
     - WPE_WESTON_OUTPUT_MAX_HEIGHT: 0
