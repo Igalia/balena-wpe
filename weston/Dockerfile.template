@@ -1,6 +1,7 @@
 FROM igalia/balena-weston:%%BALENA_MACHINE_NAME%%-252a2a2
 
 COPY data/	 /data/
+RUN mkdir -p /usr/share/icons/transparent && mv /data/cursors /usr/share/icons/transparent
 
 COPY weston-init /weston-init
 RUN chmod +x /weston-init

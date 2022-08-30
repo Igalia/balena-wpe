@@ -28,6 +28,11 @@ startup-animation=fade
 
 IEOF
 
+WPE_WESTON_HIDE_CURSOR=${WPE_WESTON_HIDE_CURSOR:-0}
+if [ "$WPE_WESTON_HIDE_CURSOR" -eq 1 ]; then
+    sed -i "/^\[shell\]/s/$/\ncursor-theme=transparent/" /weston.ini
+fi
+
 WPE_WESTON_OUTPUT_MAX_WIDTH=${WPE_WESTON_OUTPUT_MAX_WIDTH:-0}
 WPE_WESTON_OUTPUT_MAX_HEIGHT=${WPE_WESTON_OUTPUT_MAX_HEIGHT:-0}
 
