@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export WAYLAND_DISPLAY="wayland-0"
+export WAYLAND_DISPLAY="wayland-1"
 export XDG_RUNTIME_DIR=/run/weston/xdg_runtime
 
 URL=${WPE_URL:-https://wpewebkit.org}

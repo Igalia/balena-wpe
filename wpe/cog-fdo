@@ -1,13 +1,16 @@
 #! /bin/sh
 
-export WAYLAND_DISPLAY="wayland-0"
+export WAYLAND_DISPLAY="wayland-1"
 export XDG_RUNTIME_DIR=/run/weston/xdg_runtime
 
-export COG_PLATFORM_FDO_VIEW_FULLSCREEN=${WPE_COG_PLATFORM_FDO_VIEW_FULLSCREEN:-0}
+export COG_PLATFORM_WL_VIEW_FULLSCREEN=${WPE_COG_PLATFORM_WL_VIEW_FULLSCREEN:-0}
 
-export COG_PLATFORM_FDO_VIEW_WIDTH=${WPE_COG_PLATFORM_FDO_VIEW_WIDTH:-1280}
-export COG_PLATFORM_FDO_VIEW_HEIGHT=${WPE_COG_PLATFORM_FDO_VIEW_HEIGHT:-720}
+export COG_PLATFORM_WL_VIEW_WIDTH=${WPE_COG_PLATFORM_WL_VIEW_WIDTH:-1280}
+export COG_PLATFORM_WL_VIEW_HEIGHT=${WPE_COG_PLATFORM_WL_VIEW_HEIGHT:-720}
 export GALLIUM_HUD=${GALLIUM_HUD:-}
+
+# Define GST_PLUGIN_FEATURE_RANK=avdec_av1:0 to disable libav software decoding for av1
+export GST_PLUGIN_FEATURE_RANK="avdec_av1:0"
 
 export PULSE_SERVER=${WPE_PULSE_SERVER:-unix:/run/pulse/pulseaudio.socket}
 
@@ -23,7 +26,7 @@ function launch
 	do
         killall /usr/bin/cog
         echo "Launching Cog for $@ ..."
-        /usr/bin/cog -P fdo $@
+        /usr/bin/cog -P wl $@
         if [ "${WPE_COG_RELAUNCH}" == "1" ]
         then
             sleep ${WPE_COG_RELAUNCH_DELAY:-5}
