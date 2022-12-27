@@ -1,4 +1,4 @@
-FROM igalia/balena-browser-wpe:%%BALENA_MACHINE_NAME%%-3a29bb9
+FROM igalia/balena-browser-wpe:%%BALENA_MACHINE_NAME%%-b7e469c
 
 COPY wpe-init /wpe-init
 RUN chmod +x /wpe-init
