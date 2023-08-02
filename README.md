@@ -120,9 +120,9 @@ value for hardware accelerated graphics.
 
 | Environment variable                       | Options   | Default | Description
 |--------------------------------------------|-----------|---------|---------------------------------------------------
-| **`WPE_COG_PLATFORM_FDO_VIEW_FULLSCREEN`** | `0`, `1`  | `1`     | Enables the fullscreen mode in the browser screen
-| **`WPE_COG_PLATFORM_FDO_VIEW_HEIGHT`**     | `integer` | `720`   | Vertical resolution
-| **`WPE_COG_PLATFORM_FDO_VIEW_WIDTH`**	     | `integer` | `1280`  | Horizontal resolution
+| **`WPE_COG_PLATFORM_WL_VIEW_FULLSCREEN`** | `0`, `1`  | `1`     | Enables the fullscreen mode in the browser screen
+| **`WPE_COG_PLATFORM_WL_VIEW_HEIGHT`**     | `integer` | `720`   | Vertical resolution
+| **`WPE_COG_PLATFORM_WL_VIEW_WIDTH`**	     | `integer` | `1280`  | Horizontal resolution
 | **`WPE_COG_RELAUNCH`**                     | `0`, `1`  | `unset` | Enables forcing relaunch of the browser
 | **`WPE_COG_RELAUNCH_DELAY`**               | `integer` | `5`     | Add delay during forced relaunch
 

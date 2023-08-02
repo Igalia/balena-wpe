@@ -33,10 +33,10 @@ assets:
       url: 'https://raw.githubusercontent.com/igalia/balena-wpe/main/logo.png'
 data:
   applicationEnvironmentVariables:
-    - WPE_COG_PLATFORM_FDO_VIEW_FULLSCREEN: 1
-    - WPE_COG_PLATFORM_FDO_VIEW_HEIGHT: 720
-    - WPE_COG_PLATFORM_FDO_VIEW_WIDTH: 1280
     - WPE_COG_RELAUNCH: ''
+    - WPE_COG_PLATFORM_WL_VIEW_FULLSCREEN: 1
+    - WPE_COG_PLATFORM_WL_VIEW_HEIGHT: 720
+    - WPE_COG_PLATFORM_WL_VIEW_WIDTH: 1280
     - WPE_COG_RELAUNCH_DELAY: 5
     - WPE_PULSE_SERVER: 'unix:/run/pulse/pulseaudio.socket'
     - WPE_WESTON_SHELL: desktop
