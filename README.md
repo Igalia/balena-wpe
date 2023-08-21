@@ -1,5 +1,17 @@
 # WPE Webkit for the RaspberryPi
 
+**Project Status: No Longer Under Active Development**
+
+We regret to inform you that this project, which initially began as an experiment to integrate WPE into the Balena Hub, has transitioned into a state of discontinuation. While we appreciate the interest and support that this project has garnered, due to various factors, we are no longer actively maintaining or developing it.
+
+As a result, the project is not being updated to incorporate the latest versions or bugfixes. The current version available might not reflect the most recent advancements or patches in the WPE ecosystem.
+
+We understand that this might cause inconvenience to users who were looking forward to continued enhancements. If you encounter issues or are seeking updates, we recommend exploring alternative solutions or resources that align with your requirements.
+
+We appreciate your understanding and thank you for your interest in this project. Should you have any further questions or inquiries, please feel free to get in touch.
+
+## Description
+
 This project uses 3 different balena blocks:
 
 * [balena WPE](https://github.com/Igalia/balena-browser-wpe)
